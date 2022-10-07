@@ -1,0 +1,13 @@
+pages\AmazonPage.class
+pages\BluerentalcarsPage.class
+pages\FacebookPage.class
+stepDefinitions\AmazonStepDefinition.class
+pages\SaucedemoPage.class
+runners\Runner.class
+utilities\ReusableMethods$1.class
+pages\WebdriverUniversityPage.class
+utilities\Driver.class
+pages\HotelmycampPage.class
+utilities\ConfigReader.class
+pages\DhtmlgoodiesPage.class
+utilities\ReusableMethods.class
