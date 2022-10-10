@@ -9,5 +9,6 @@ pages\WebdriverUniversityPage.class
 utilities\Driver.class
 pages\HotelmycampPage.class
 utilities\ConfigReader.class
+stepDefinitions\SaucedemoStepDefinition.class
 pages\DhtmlgoodiesPage.class
 utilities\ReusableMethods.class
