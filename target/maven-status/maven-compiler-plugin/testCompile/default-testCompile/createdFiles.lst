@@ -7,6 +7,7 @@ runners\Runner.class
 utilities\ReusableMethods$1.class
 pages\WebdriverUniversityPage.class
 utilities\Driver.class
+stepDefinitions\HepsiBuradaStepDefinition.class
 pages\HotelmycampPage.class
 utilities\ConfigReader.class
 stepDefinitions\SaucedemoStepDefinition.class

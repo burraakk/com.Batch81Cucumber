@@ -7,9 +7,12 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import pages.AmazonPage;
+import utilities.ConfigReader;
 import utilities.Driver;
 
 public class AmazonStepDefinition {
+    AmazonPage amazonPage = new AmazonPage();
+
     @Given("Kullanici amazon sayfasina gider")
     public void kullaniciAmazonSayfasinaGider() {
         Driver.getDriver().get("https://www.amazon.com");
@@ -22,7 +25,6 @@ public class AmazonStepDefinition {
 
     @And("Sonuclarin Nutella icerdigini test eder")
     public void sonuclarinNutellaIcerdiginiTestEder() {
-        AmazonPage amazonPage = new AmazonPage();
         String arananKelime="Nutella";
         String actualAramaSonucStr= amazonPage.searchResultWE.getText();
         Assert.assertTrue(actualAramaSonucStr.contains(arananKelime));
@@ -59,5 +61,36 @@ public class AmazonStepDefinition {
         String arananKelime="Iphone";
         String actualAramaSonucStr= amazonPage.searchResultWE.getText();
         Assert.assertTrue(actualAramaSonucStr.contains(arananKelime));
+    }
+
+    @Then("Kullanici {string} aratir")
+    public void kullaniciAratir(String arananKelime) {
+        amazonPage.searchBox.sendKeys(arananKelime,Keys.ENTER);
+    }
+
+    @And("Sonuclarin {string} icerdigini test eder")
+    public void sonuclarinIcerdiginiTestEder(String arananKelime) {
+        String actualAramaSonucStr= amazonPage.searchResultWE.getText();
+        Assert.assertTrue(actualAramaSonucStr.contains(arananKelime));
+    }
+
+    @Given("Kullanici {string} sayfasina gider")
+    public void kullaniciSayfasinaGider(String arananUrl) {
+        Driver.getDriver().get(ConfigReader.getProperty(arananUrl));
+    }
+
+    @Then("URL'in {string} icerdigini test edin")
+    public void urlInIcerdiginiTestEdin(String arananUrl) {
+        String actualUrl = Driver.getDriver().getCurrentUrl();
+        Assert.assertTrue(actualUrl.contains(arananUrl));
+    }
+
+    @Then("Kullanici {int} saniye bekler")
+    public void kullaniciSaniyeBekler(int istenenSure) {
+        try {
+            Thread.sleep(istenenSure*1000);
+        }catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
