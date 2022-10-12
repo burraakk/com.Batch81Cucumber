@@ -7,7 +7,7 @@ import utilities.Driver;
 
 public class BluerentalcarsPage {
     public BluerentalcarsPage() {
-        PageFactory.initElements(Driver.getDriver(), this);
+        PageFactory.initElements(Driver.getDriver(),this);
     }
 
     @FindBy (className = "btn btn-primary btn-sm")
