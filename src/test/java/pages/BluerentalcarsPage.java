@@ -5,9 +5,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class BluerentalcarsPage {
-    public BluerentalcarsPage() {
-        PageFactory.initElements(Driver.getDriver(),this);
+public class BluerentalcarsPage{
+
+    public BluerentalcarsPage(){    //Constructor oluşturup public yapmamız gerekir
+        PageFactory.initElements(Driver.getDriver(), this);
+        //this-> Driver class'indaki Driver.getDriver() 'i , Page class'indaki driver'a  esitledi/tanitti.
     }
 
     @FindBy (className = "btn btn-primary btn-sm")

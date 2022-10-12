@@ -8,7 +8,7 @@ import utilities.ReusableMethods;
 
 import java.io.IOException;
 
-public class Practice_TC_07steps {
+public class Practice_TC_07_StepDefinition {
 
     Practice_TC07_Page practiceTc07Page = new Practice_TC07_Page();
     @Given("Tarayiciyi baslatarak {string} url'sine gidin")
