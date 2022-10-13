@@ -1,5 +1,6 @@
 stepDefinitions\AmazonStepDefinition.class
 utilities\ReusableMethods$1.class
+stepDefinitions\PracticeTestPageStepDefinition.class
 stepDefinitions\EditorDTStepDefinition.class
 pages\PracticeAmazonPage.class
 stepDefinitions\PracticeAmazonStepDefinition.class
@@ -17,6 +18,7 @@ runners\Runner.class
 pages\WebdriverUniversityPage.class
 utilities\Driver.class
 stepDefinitions\BluerentalcarsStepDefinition.class
+pages\PracticeTestPage.class
 utilities\ConfigReader.class
 stepDefinitions\SaucedemoStepDefinition.class
 pages\Practice_TC07_Page.class

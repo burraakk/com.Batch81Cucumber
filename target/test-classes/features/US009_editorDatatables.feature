@@ -1,7 +1,7 @@
 @editorDatatables
 Feature: Editor Datatables Task
 
-  Scenario Outline :
+  Scenario Outline : US_009
     When kullanici "dataUrl" adresine gider
     Then  new butonuna basar
     And isim bolumune "<firstname>" girer
