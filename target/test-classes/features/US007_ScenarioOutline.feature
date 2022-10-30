@@ -12,4 +12,4 @@ Feature: US007 Scenario Outline Kullanimi
       | googleUrl            | google            |
       | automationexerciseUrl| automationexercise|
       | saucedemoUrl         | saucedemo         |
-      | bluerentalcarsUrl    | bluerentalcars    |
+      | brcUrl    | bluerentalcars    |
